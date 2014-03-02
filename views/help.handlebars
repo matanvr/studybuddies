@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+
+    <title>Help</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/starter-template.css" rel="stylesheet">
+  </head>
+
+<body data-spy="scroll" data-target=".navbar-example">
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" id="home-button" href="./" > Classbook</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li ><a href="./homepage">My Classes</a></li>
+            <li ><a href="./my-profile">My Profile</a></li>
+            <li class="active"><a href="./help">Help</a></li>
+             <li><a href="./logout">Sign out</a></li>
+
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+  <div class="container">
+   
+    <nav id="navbar-example2" class="navbar navbar-default navbar-static" role="navigation">
+      <div class="container-fluid">
+    
+        <p class="navbar-text">Help Center</p>
+    
+      </div>
+    </nav>
+
+    {{#if sent}}
+      <div class="alert alert-success">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <strong>Thank you!</strong> We will respond to your message as soon as possible.
+      </div>
+    {{/if}}
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Frequently Asked Questions</h3>
+      </div>
+      <div class="panel-body">
+        <ol>
+          <li><b>How does Classbook sort students in my class?</b></li>
+            <p>Classbook uses degrees of seperation to list the students you may have more connections with towards the top of the list, using data from your college and Facebook for example.</p>
+          
+          <li><b>How do I view mutual classes with another student?</b></li>
+            <p>To view mutual classes with another student, go to their profile page and select the 'Mutual Classes' tab under Enrolled Classes.</p>
+
+          <li><b>How do I add or remove a class?</b></li>
+            <p>Users can edit their schedule, by looking at their schedule on the main page and clicking on the pencil icon at the top right. This then gives the user the ability to add and remove classes.</p>
+          
+          <li><b>How do I change my profile image?</b></li>
+            <p>Users can change their profile image by going to their profile, hovering over the image and clicking the pencil icon to upload a new image.</p>
+          
+          <li><b>How do I change my password?</b></li>
+            <p>Users can change their password by going to their profile, and entering their password in the change password form</p>
+
+        </ol>
+      </div>
+    </div> 
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Contact Us!</h3>
+      </div>
+      <div class="panel-body">
+
+    <form role="form" action="./help" method="post">
+
+      <div class="form-group">
+        <label class="control-label" for="inputEmail3">Subject</label>
+        <select type="subject" class="form-control" id="subject" placeholder="Subject" name="subject" required>
+          <option>General trouble with my account</option>
+          <option>Can't change my password</option>
+          <option>Can't change my profile image</option>
+          <option>I have a suggestion</option>
+          <option>Other</option>
+        </select>
+        <br>
+        <input type="subject" class="form-control" id="subject" placeholder="Other Subject" name="subject">
+
+      </div>
+      <div class="form-group">
+        <label class="control-label" for="inputEmail3">Issue Details</label>
+        <textarea type="email" class="form-control" id="inputEmail3" placeholder="Details" name="details" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-default">Send for help!</button>
+    </form>
+
+    </div>
+    
+  </div>
+
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script src="dist/js/bootstrap.min.js"></script>
+</body
+
+</html>

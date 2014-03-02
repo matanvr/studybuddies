@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+
+    <title>Classbook</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/starter-template.css" rel="stylesheet">
+  </head>
+
+<body data-spy="scroll" data-target=".navbar-example">
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" id="home-button" href="./homepage" > Classbook</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="./homepage">My Classes</a></li>
+            <li><a href="./my-profile">My Profile</a></li>
+            <li><a href="./help">Help</a></li>
+             <li><a href="./logout">Sign out</a></li>
+
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+ <div class="container">
+	 
+	<!-- Nav Bar Class -->
+
+    <nav id="navbar-example2" class="navbar navbar-default navbar-static" role="navigation">
+       
+      <div class="container-fluid">
+		  
+		 <!-- Classes Header -->
+        <div class="navbar-header">
+         <p class="navbar-text">My Classes</p>
+
+          
+         
+        </div>
+        
+		<!-- End Classes Header -->
+		
+
+		<!-- End Classes List -->
+      </div>
+    </nav>
+	<!-- End Nav Bar Class -->
+    <div class="input">
+ 
+</div><br>
+	<!-- Classes Info Class -->
+
+  <ul class="nav nav-tabs">
+  <li class="active"><a href="#byQuarters" data-toggle="tab">By Quarter</a></li>
+  <li><a href="#allClasses" data-toggle="tab">All Classes</a></li>
+
+  </ul>
+  <div class="tab-content">
+    <div data-spy="scroll" data-target="#navbar-example2"  id="byQuarters" data-offset="0" class="scrollspy-example fixed-box tab-pane active">
+		
+	  <!-- Content for classes -->
+	  
+	  <!-- End content for classes -->
+	  <div class="panel-group" id="accordion">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#wi14dis">
+           <h4 id="wi14">Winter 2014</h4>
+        </a>
+      </h4>
+     
+    </div>
+    <div id="wi14dis" class="panel-collapse collapse in">
+      <div class="panel-body">
+        <div class="edit-buttons">
+          <div class="btn-group" >
+             <button type="button" class="btn btn-default " id="editToggle"><span class="glyphicon glyphicon-pencil"></span></button> 
+            
+            </div>
+        </div>
+        <br>
+          <div  id ="togglewinter2014"> 
+               <div class="form-horizontal">
+              
+          
+       
+                      <label class="control-label" > Add Class:</label>
+                      <input class="form-control classID" placeholder="Course ID">
+                      <input class="form-control className" placeholder="Class Name">
+                      <input class="form-control sectionID" placeholder="Section ID">
+                      <button class="btn btn-primary btn-block addclass"> Add </button>
+                      <br>
+           
+                 <INPUT TYPE="hidden" class="term" VALUE="winter2014">
+              </div>
+        </div>
+        <table class="table classes table-striped" id="winter2014table">
+          <thead>
+          <tr class="btn-primary">
+       
+          <th> 
+             ID
+          </th>
+          <th> 
+             Name
+          </th>
+          <th> 
+             Section
+          </th>
+          <th>
+            Edit
+          </th>
+        </tr>
+          </thead>
+          <tbody>
+      
+          {{#each quarters.winter2014}}
+           <tr> 
+              <td class ="clickable" >{{id}}</td>
+              <td class ="clickable">{{name}}</td>
+              <td class ="clickable" >{{section}}</td>
+              <td class="remove">  <span class="glyphicon glyphicon-remove"></span></td>      
+           </tr>
+           {{/each}}
+          </tbody> 
+        </table>
+
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#fa13dis">
+          <h4 id="fa13">Fall 2013</h4>
+        </a>
+      </h4>
+    </div>
+    <div id="fa13dis" class="panel-collapse collapse">
+      <div class="panel-body">
+        <div class="edit-buttons">
+          <div class="btn-group" >
+             <button type="button" class="btn btn-default " id="editToggleFall2013"><span class="glyphicon glyphicon-pencil"></span></button> 
+            
+            </div>
+        </div>
+        <br>
+          <div  id ="togglefall2013" > 
+               <div class="form-horizontal">
+                      <label class="control-label"> Add Class:</label>
+                      <input class="form-control classID" placeholder="Course ID">
+                      <input class="form-control className" placeholder="Class Name">
+                      <input class="form-control sectionID" placeholder="Section ID">
+                      <button class="btn btn-primary btn-block addclass"> Add </button>
+                      <br>
+           
+                 <INPUT TYPE="hidden" class="term" VALUE="fall2013">
+              </div>
+        </div>
+        <table class="table table-striped classes" id="fall2013table" >
+          <thead>
+          <tr class="btn-primary">
+       
+          <th> 
+             ID
+          </th>
+          <th> 
+             Name
+          </th>
+          <th> 
+             Section
+          </th>
+          <th>
+            Edit
+          </th>
+        </tr>
+          </thead>
+          <tbody>
+      
+          {{#each quarters.fall2013}}
+           <tr> 
+              <td class ="clickable" >{{id}}</td>
+              <td class ="clickable">{{name}}</td>
+              <td class ="clickable" >{{section}}</td>
+              <td class="remove">  <span class="glyphicon glyphicon-remove"></span></td>      
+           </tr>
+           {{/each}}
+          </tbody> 
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#su13dis">
+          <h4 id="su13">Summer 2013</h4>
+        </a>
+      </h4>
+    </div>
+    <div id="su13dis" class="panel-collapse collapse">
+      <div class="panel-body">
+        <div class="edit-buttons">
+          <div class="btn-group" >
+             <button type="button" class="btn btn-default " id="editToggleSummer2013"><span class="glyphicon glyphicon-pencil"></span></button> 
+            
+          </div>
+        </div>
+        <br>
+          <div  id ="togglesummer2013" > 
+               <div class="form-horizontal" >
+              
+          
+       
+                      <label class="control-label" > Add Class: </label>
+                      <input class="form-control classID" name="classID" placeholder="Course ID">
+                      <input class="form-control className" name="className" placeholder="Class Name">
+                      <input class="form-control sectionID" name="sectionID" placeholder="Section ID">
+                      <button  class="btn btn-primary btn-block addclass"> Add </button>
+                      <br>
+           
+                 <INPUT TYPE="hidden" class="term" VALUE="summer2013">
+              </div>
+        </div>
+       <table class="table classes table-striped" id="summer2013table">
+          <thead>
+          <tr class="btn-primary">
+       
+          <th> 
+             ID
+          </th>
+          <th> 
+             Name
+          </th>
+          <th> 
+             Section
+          </th>
+          <th>
+            Edit
+          </th>
+        </tr>
+          </thead>
+          <tbody>
+      
+          {{#each quarters.summer2013}}
+           <tr> 
+              <td class ="clickable" >{{id}}</td>
+              <td class ="clickable">{{name}}</td>
+              <td class ="clickable" >{{section}}</td>
+              <td class="remove">  <span class="glyphicon glyphicon-remove"></span></td>      
+           </tr>
+           {{/each}}
+          </tbody> 
+        </table>
+      </div>
+    </div>
+  </div>
+    <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#sp13dis">
+          <h4 id="sp13">Spring 2013</h4>
+        </a>
+      </h4>
+    </div>
+    <div id="sp13dis" class="panel-collapse collapse">
+      <div class="panel-body">
+        <div class="edit-buttons">
+          <div class="btn-group" >
+             <button type="button" class="btn btn-default " id="editToggleSpring2013"><span class="glyphicon glyphicon-pencil"></span></button> 
+            
+          </div>
+        </div>
+        <br>
+          <div  id ="togglespring2013" > 
+               <div class="form-horizontal" >
+              
+          
+       
+                      <label class="control-label" > Add Class: </label>
+                      <input class="form-control classID" name="classID" placeholder="Course ID">
+                      <input class="form-control className" name="className" placeholder="Class Name">
+                      <input class="form-control sectionID" name="sectionID" placeholder="Section ID">
+                      <button class="btn btn-primary btn-block addclass"> Add </button>
+                      <br>
+           
+                 <INPUT TYPE="hidden" class="term" VALUE="spring2013">
+              </div>
+        </div>
+
+       <table class="table classes table-striped" id="spring2013table">
+          <thead>
+          <tr class="btn-primary">
+       
+          <th> 
+             ID
+          </th>
+          <th> 
+             Name
+          </th>
+          <th> 
+             Section
+          </th>
+          <th>
+            Edit
+          </th>
+        </tr>
+          </thead>
+          <tbody>
+      
+          {{#each quarters.spring2013}}
+           <tr> 
+              <td class ="clickable" >{{id}}</td>
+              <td class ="clickable">{{name}}</td>
+              <td class ="clickable" >{{section}}</td>
+              <td class="remove">  <span class="glyphicon glyphicon-remove"></span></td>      
+           </tr>
+           {{/each}}
+          </tbody> 
+        </table>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+    </div>
+
+  <div id="allClasses" class="tab-pane"> 
+    <br>
+     <input type="text" class="form-control" placeholder="Filter Classes" id="filter">
+    <br>
+          <table class="table table-striped AllClasses">
+        <thead>    
+        <tr class="btn-primary">
+          <th> 
+             ID
+          </th>
+          <th> 
+             Name
+          </th>
+          <th> 
+             Section
+          </th>
+          <th>
+            Quarter
+          </th>
+        </tr>
+      </thead>
+          {{#each allClasses}}
+           <tr> 
+              <td class ="clickable"  >{{id}}</td>
+              <td class ="clickable">{{name}}</td>
+              <td class ="clickable" >{{section}}</td>
+              <td class="clickable"> {{quarter}} </td>    
+           </tr>
+           {{/each}}
+        </table> 
+  </div>  
+	<!-- End Classes Info Class -->
+	</div>
+  </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <script src="dist/js/bootstrap.min.js"></script>
+    <script src="js/initializeHome.js"></script>
+
+
+
+</body>
+
+</html>

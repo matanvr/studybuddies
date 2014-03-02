@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+
+    <title>Profile</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/starter-template.css" rel="stylesheet">
+  </head>
+
+<body data-spy="scroll" data-target=".navbar-example">
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" id="home-button" href="./homepage" > Classbook</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li ><a href="./homepage">My Classes</a></li>
+            <li><a href="./my-profile">My Profile</a></li>
+            <li><a href="./help">Help</a></li>
+             <li><a href="./logout">Sign out</a></li>
+
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+ <div class="container">
+   
+  <nav id="navbar-example2" class="navbar navbar-default navbar-static" role="navigation">
+    <div class="container-fluid">
+  
+      <div class="navbar-header">
+       
+        
+      </div>
+      <p class="navbar-text">Profile</p>
+  
+    </div>
+  </nav>
+
+  <div id="profile-container">
+
+    <div id="profile-image">
+      <img src={{info.imageURL}} class="profile-pic" class="img-rounded">
+    </div>
+<br>
+
+	<ul class="nav nav-tabs">
+  <li class="active"><a href="#contact" data-toggle="tab">Contact</a></li>
+  <li><a href="#enrolledClasses" data-toggle="tab">Classes</a></li>
+  <li><a href="#classHistory" data-toggle="tab">Mutual</a></li>
+  </ul>
+	<div class="tab-content">
+
+    <div class="tab-pane active" id="contact">
+      <h4><span class="glyphicon glyphicon-user"></span> Contact</h4>
+
+      <table class="table">
+        <tbody>
+          <tr>
+            <td>Name</td>
+            <td id="profile-name">{{info.firstName}} {{info.lastName}}</td>
+          </tr>
+          <tr>
+            <td>Email</td>
+            <td id="profile-email">{{info.email}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+	
+	
+
+    <div class="tab-pane" id="enrolledClasses">
+      <h4><span class="glyphicon glyphicon-tasks"></span> Enrolled Classes</h4>
+
+
+  
+    
+      <table class="table table-hover classes">
+        <thead>
+          <th> 
+             ID
+          </th>
+          <th> 
+             Name
+          </th>
+          <th> 
+             Section
+          </th>
+        </thead>
+        <tbody>
+          {{#each current_classes}}
+          <tr>
+            <td>{{id}}</td>
+            <td>{{name}}</td>
+            <td>{{section}} </td>
+          </tr>
+          {{/each}}
+        </tbody>
+      </table>
+
+
+           <h4><span class="glyphicon glyphicon-time"></span> Class History</h4>
+
+      <table class="table table-hover classes">
+        <thead>
+          <th> 
+             ID
+          </th>
+          <th> 
+             Name
+          </th>
+          <th> 
+             Section
+          </th>
+        </thead>
+        <tbody>
+          {{#each previous_classes}}
+          <tr>
+            <td>{{id}}</td>
+            <td>{{name}}</td>
+            <td>{{section}} </td>
+          </tr>
+          {{/each}}
+        </tbody>
+      </table>
+   
+     
+    </div>
+
+    <div class="tab-pane" id="classHistory">
+      <h4><span class="glyphicon glyphicon-tasks"></span> Enrolled Classes</h4>
+
+      <table class="table table-hover classes">
+        <thead>
+          <th> 
+             ID
+          </th>
+          <th> 
+             Name
+          </th>
+          <th> 
+             Section
+          </th>
+        </thead>
+        <tbody>
+          {{#each current_classes_mutual}}
+          <tr>
+            <td>{{id}}</td>
+            <td>{{name}}</td>
+            <td>{{section}} </td>
+          </tr>
+          {{/each}}
+        </tbody>
+      </table>
+      <h4><span class="glyphicon glyphicon-time"></span> Class History</h4>
+
+      <table class="table table-hover classes">
+        <thead>
+          <th> 
+             ID
+          </th>
+          <th> 
+             Name
+          </th>
+          <th> 
+             Section
+          </th>
+        </thead>
+        <tbody>
+          {{#each previous_classes_mutual}}
+          <tr>
+            <td>{{id}}</td>
+            <td>{{name}}</td>
+            <td>{{section}} </td>
+          </tr>
+          {{/each}}
+        </tbody>
+      </table>
+    
+
+  </div>
+
+
+   </div>
+
+    </div>
+
+</div>
+
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script src="dist/js/bootstrap.min.js"></script>
+  <script src="js/initializeProfile.js"></script>
+</body
+
+</html>
