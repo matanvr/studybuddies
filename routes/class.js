@@ -86,11 +86,7 @@ exports.initialize2 = function(req, res) {
  * Function that is called when the document is ready.
  */
 function initializePage() {
-	$(".clickable first").click(function(e){
-		ga("send", "event", "profileclick", "click");
-	});
-
-	$(".clickable second").click(function(e){
+	$(".clickable").click(function(e){
 		ga("send", "event", "profileclick", "click");
 	});
 }

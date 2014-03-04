@@ -96,15 +96,15 @@
                 <th>Profile</th>
                 <th>First Name</th>
                 <th>Last Name</th>
-                <th> Group Status </th>
+                <th>Group Status</th>
               </tr>
             </thead>
             <tbody>
               {{#each students}}
               <tr id='{{id}}'>
-                <td class="clickable first"><img src='{{imageURL}}' height="75px" width="75px" class="img-circle"></td>
-                <td class="clickable first">{{firstName}}</td>
-                <td class="clickable first">{{lastName}}</td>
+                <td class="clickable"><img src='{{imageURL}}' height="75px" width="75px" class="img-circle"></td>
+                <td class="clickable">{{firstName}}</td>
+                <td class="clickable">{{lastName}}</td>
                 <td class="invite-button">
                   {{#if clickable}}
                   <button type="button" class="btn btn-warning " data-toggle="modal" data-target="#myModal{{firstName}}{{lastName}}">Invite to Group</button> 
@@ -186,9 +186,9 @@
       <tbody>
         {{#each students}}
         <tr id='{{id}}'>
-                <td class="clickable second"><img src='{{imageURL}}' height="75px" width="75px" class="img-circle"></td>
-                <td class="clickable second">{{firstName}}</td>
-                <td class="clickable second">{{lastName}}</td>
+                <td class="clickable"><img src='{{imageURL}}' height="75px" width="75px" class="img-circle"></td>
+                <td class="clickable">{{firstName}}</td>
+                <td class="clickable">{{lastName}}</td>
         </tr>
         {{/each}}
       </tbody>
