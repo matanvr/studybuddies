@@ -49,6 +49,7 @@ app.get('/', index.initialize);
 app.post('/', index.authenticate);
 app.get('/homepage', homepage.initialize);
 app.get('/class', classfile.initialize);
+app.get('/class2', classfile.initialize2);
 app.get('/help', help.initialize);
 app.get('/sign-up', signup.initialize);
 app.get('/profile', profile.initialize);

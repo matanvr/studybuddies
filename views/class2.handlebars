@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+
+    <title>Course Page</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/starter-template.css" rel="stylesheet">
+  </head>
+
+<body data-spy="scroll" data-target=".navbar-example">
+
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" id="home-button" href="./homepage" > Classbook</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="./homepage">My Classes</a></li>
+            <li><a href="./my-profile">My Profile</a></li>
+            <li><a href="./help">Help</a></li>
+             <li><a href="./logout">Sign out</a></li>
+
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+ <div class="container">
+
+  <!-- Nav Bar Class -->
+  
+    <nav id="navbar-example2" class="navbar navbar-default " role="navigation">
+
+      <div class="container-fluid">
+      
+     <!-- Classes Header -->
+        <div class="navbar-header">
+          
+        </div>
+        <p class="navbar-text" id="class-title"> {{classInfo.courseName}} - {{classInfo.className}} ({{classInfo.sectionID}}) </p>
+    <!-- End Classes Header -->
+
+      </div>
+
+    </nav>
+  <!-- End Nav Bar Class -->
+  <div class="input">
+  <input id="filter" type="text" class="form-control" placeholder="Filter Students">
+</div><br>
+  <!-- Classes Info Class -->
+    <div data-spy="scroll" data-target="#navbar-example2" data-offset="0" class="scrollspy-example fixed-box">
+    <!-- Content for classes -->
+
+ 
+    <table class="table classmates table-striped">
+      <thead>
+        <tr <tr class="btn-primary">
+          <th>Profile</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each students}}
+        <tr id='{{id}}'>
+          <td><img src='{{imageURL}}' height="75px" width="75px" class="img-circle"></td>
+          <td>{{firstName}}</td>
+          <td>{{lastName}}</td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+     
+
+  </div>
+    <!-- End content for classes -->
+
+      
+  </div>
+
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script src="dist/js/bootstrap.min.js"></script>
+  <script src="js/initializeClass.js"></script>
+
+</body
+
+</html>

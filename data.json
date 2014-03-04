@@ -400,7 +400,97 @@
 						}
 					]
 				}
+		},
+		{
+			"id": 4,
+			"firstName": "John",
+			"lastName": "Vento",
+			"university": "University of California, San Diego",
+			"email": "jvento@ucsd.edu",
+			"password": "group5",
+			"imageURL": "uploads/fullsize/no-user.jpg",
+			"quarters": 
+
+				{
+					"winter2014": 
+					[
+						{
+							"id": "CSE 190",
+							"name": "Topics in Computer Science and Engineering",
+							"section": "9234"
+						}
+					]
+				}
+			
+		},
+		{
+			"id": 5,
+			"firstName": "Shawn",
+			"lastName": "Glazer",
+			"university": "University of California, San Diego",
+			"email": "sglazier@ucsd.edu",
+			"password": "group5",
+			"imageURL": "uploads/fullsize/no-user.jpg",
+			"quarters": 
+
+				{
+					"winter2014": 
+					[
+						{
+							"id": "CSE 190",
+							"name": "Topics in Computer Science and Engineering",
+							"section": "9234"
+						}
+					]
+				}
+			
+		},
+		{
+			"id": 6,
+			"firstName": "Adam",
+			"lastName": "Chester",
+			"university": "University of California, San Diego",
+			"email": "achester@ucsd.edu",
+			"password": "group5",
+			"imageURL": "uploads/fullsize/no-user.jpg",
+			"quarters": 
+
+				{
+					"winter2014": 
+					[
+						{
+							"id": "CSE 190",
+							"name": "Topics in Computer Science and Engineering",
+							"section": "9234"
+						}
+					]
+				}
+			
+		},
+		{
+			"id": 7,
+			"firstName": "Justin",
+			"lastName": "Lakhani",
+			"university": "University of California, San Diego",
+			"email": "lakhani@ucsd.edu",
+			"password": "group5",
+			"imageURL": "uploads/fullsize/no-user.jpg",
+			"quarters": 
+
+				{
+					"winter2014": 
+					[
+						{
+							"id": "CSE 190",
+							"name": "Topics in Computer Science and Engineering",
+							"section": "9234"
+						}
+					]
+				}
+			
 		}
+
+
 	],
 	"Classes": [
 		{
@@ -458,7 +548,20 @@
 				},
 				{
 					"id": 3
+				},
+				{
+					"id": 4
+				},
+				{
+					"id": 5
+				},
+				{
+					"id": 6
+				},
+				{
+					"id": 7
 				}
+
 			]
 		},
 		{

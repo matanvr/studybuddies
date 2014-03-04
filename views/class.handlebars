@@ -58,6 +58,8 @@
       </div>
 
     </nav>
+
+  {{#if group}} 
   <ul class="nav nav-tabs">
     <li class="active"><a href="#classMates" data-toggle="tab">All</a></li>
       <li><a href="#groupMates" data-toggle="tab" >Groupmates</a></li>
@@ -85,9 +87,9 @@
             <tbody>
               {{#each students}}
               <tr id='{{id}}'>
-                <td class="clickable"><img src='{{imageURL}}' height="75px" width="75px" class="img-circle"></td>
-                <td class="clickable">{{firstName}}</td>
-                <td class="clickable">{{lastName}}</td>
+                <td class="clickable first"><img src='{{imageURL}}' height="75px" width="75px" class="img-circle"></td>
+                <td class="clickable first">{{firstName}}</td>
+                <td class="clickable first">{{lastName}}</td>
                 <td class="invite-button">
                   {{#if clickable}}
                   <button type="button" class="btn btn-warning " data-toggle="modal" data-target="#myModal{{firstName}}{{lastName}}">Invite to Group</button> 
@@ -138,9 +140,9 @@
             </thead>
             <tbody> 
               <tr id='{{user.id}}'>
-                <td class="clickable"><img src='{{user.imageURL}}' height="75px" width="75px" class="img-circle"></td>
-                <td class="clickable">{{user.firstName}}</td>
-                <td class="clickable">{{user.lastName}}</td>
+                <td class="clickable first"><img src='{{user.imageURL}}' height="75px" width="75px" class="img-circle"></td>
+                <td class="clickable first">{{user.firstName}}</td>
+                <td class="clickable first">{{user.lastName}}</td>
             </tbody>
           </table>
 
@@ -148,6 +150,38 @@
    </div>  
       
   </div>
+  {{else}}
+
+    <div class="input">
+  <input id="filter" type="text" class="form-control" placeholder="Filter Students">
+</div><br>
+  <!-- Classes Info Class -->
+    <div data-spy="scroll" data-target="#navbar-example2" data-offset="0" class="scrollspy-example fixed-box">
+    <!-- Content for classes -->
+
+ 
+    <table class="table classmates table-striped">
+      <thead>
+        <tr <tr class="btn-primary">
+          <th>Profile</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each students}}
+        <tr id='{{id}}'>
+                <td class="clickable second"><img src='{{imageURL}}' height="75px" width="75px" class="img-circle"></td>
+                <td class="clickable second">{{firstName}}</td>
+                <td class="clickable second">{{lastName}}</td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+     
+
+  </div>
+  {{/if}}
 
   <!-- Bootstrap core JavaScript
   ================================================== -->

@@ -5,7 +5,7 @@ var data = require("../data.json");
 exports.initialize = function(req, res) {    
 	// Your code goes here
 	var data = require('../data.json');
-
+    req.session.userID = 1;
     var myStudentID = req.session.userID;
 	var studentID = req.query.id;
 	console.log(studentID + " " + myStudentID );
