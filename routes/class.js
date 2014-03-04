@@ -1,5 +1,5 @@
 
-exports.initialize = function(req, res) {    
+exports.initialize = function(req, res) {   
 	// Your code goes here
 	req.session.userID = 1;
 	var studentID = req.session.userID;
@@ -38,10 +38,10 @@ exports.initialize = function(req, res) { 
 	output.group = true;
 	res.render('class',output);
 
- }
+}
 
 
-exports.initialize2 = function(req, res) {    
+exports.initialize2 = function(req, res) {   
 	// Your code goes here
 	req.session.userID = 1;
 	var studentID = req.session.userID;
@@ -80,4 +80,18 @@ exports.initialize2 = function(req, res) { 
 	output.group = false;
 	res.render('class',output);
 
- }
+}
+
+/*
+ * Function that is called when the document is ready.
+ */
+function initializePage() {
+	// your code here
+	$(".clickable first").click(function(e){
+		ga("send", "event", "like", "click");
+	});
+
+	$(".clickable second").click(function(e){
+		ga("send", "event", "like", "click");
+	});
+}
