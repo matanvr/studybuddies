@@ -8,6 +8,11 @@ $(document).ready(function(event) {
 		//
 		goToProfile($(this).parent().attr('id'));
 	});
+	$('.grid-clickable').click(function() {
+		ga("send", "event", "profileclick", "click");
+		//
+		goToProfile($(this).parent().parent().attr('id'));
+	});
 
 	$('#filter').keyup(function(e) {
 		students.filter($('#filter').val());
@@ -16,6 +21,8 @@ $(document).ready(function(event) {
 	$('#myModal').modal('toggle');
 });
 
+
+
 function goToProfile(studentId) {
 	//console.log(studentId);
 	window.location.href = "profile?id=" + studentId;
@@ -23,7 +30,12 @@ function goToProfile(studentId) {
 $('.invite').click(function(){
 	$('#myModalMatanVardi').modal('hide');
 	var parentDiv = $(this).parent().parent().parent().parent().parent().parent();
-	parentDiv.find('.invite-button').html("<div class='btn btn-success'> Added </div>");
+	parentDiv.find('.invite-button').html("<div class='btn btn-success'>   Added <span class='glyphicon glyphicon-ok'> </span> </div><br><br><button type='button' class='btn btn-success grid-clickable' data-toggle='modal' > <span class='glyphicon glyphicon-user'> </span> Profile</button> ");
+	$('.grid-clickable').click(function() {
+		ga("send", "event", "profileclick", "click");
+		//
+		goToProfile($(this).parent().parent().attr('id'));
+	});
 	$('.modal-backdrop').hide();
 //	var addPartnerDiv = "<tr id='" +parentDiv.attr('id')+ " '>" + parentDiv.find('td').eq(0).html()+  " " + 
 //	parentDiv.find('td').eq(1).html()+ " "+  parentDiv.find('td').eq(2).html() + "</tr>";

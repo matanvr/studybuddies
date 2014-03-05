@@ -96,7 +96,7 @@
                 <th>Profile</th>
                 <th>First Name</th>
                 <th>Last Name</th>
-                <th>Group Status</th>
+                <th></th>
               </tr>
             </thead>
             <tbody>
@@ -107,7 +107,9 @@
                 <td class="clickable">{{lastName}}</td>
                 <td class="invite-button">
                   {{#if clickable}}
-                  <button type="button" class="btn btn-warning " data-toggle="modal" data-target="#myModal{{firstName}}{{lastName}}">Invite to Group</button> 
+                  <button type="button" class="btn btn-warning " data-toggle="modal" data-target="#myModal{{firstName}}{{lastName}}"> <span class="glyphicon glyphicon-plus"> </span> Group </button> 
+                  <br><br>
+                   <button type="button" class="btn btn-success grid-clickable" data-toggle="modal" > <span class="glyphicon glyphicon-user"> </span> Profile</button> 
 
                     <!-- Modal -->
                     <div class="modal fade" id="myModal{{firstName}}{{lastName}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
