@@ -2,18 +2,7 @@
 <html lang="en">
   <head>
     <!-- Google Analytics Content Experiment code -->
-    <script>function utmx_section(){}function utmx(){}(function(){var
-    k='82954578-1',d=document,l=d.location,c=d.cookie;
-    if(l.search.indexOf('utm_expid='+k)>0)return;
-    function f(n){if(c){var i=c.indexOf(n+'=');if(i>-1){var j=c.
-    indexOf(';',i);return escape(c.substring(i+n.length+1,j<0?c.
-    length:j))}}}var x=f('__utmx'),xx=f('__utmxx'),h=l.hash;d.write(
-    '<sc'+'ript src="'+'http'+(l.protocol=='https:'?'s://ssl':
-    '://www')+'.google-analytics.com/ga_exp.js?'+'utmxkey='+k+
-    '&utmx='+(x?x:'')+'&utmxx='+(xx?xx:'')+'&utmxtime='+new Date().
-    valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
-    '" type="text/javascript" charset="utf-8"><\/sc'+'ript>')})();
-    </script><script>utmx('url','A/B');</script>
+
     <!-- End of Google Analytics Content Experiment code -->
 
     <meta charset="utf-8">
@@ -43,7 +32,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" id="home-button" href="./homepage" > Classbook</a>
+          <a class="navbar-brand" id="home-button" href="./homepage" > Study Buddy</a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
@@ -56,25 +45,30 @@
         </div><!--/.nav-collapse -->
       </div>
     </div>
- <div class="container">
 
-  <!-- Nav Bar Class -->
-    <nav id="navbar-example2" class="navbar navbar-default " role="navigation">
-
+            <nav id="navbar-example2" class="navbar navbar-default navbar-static" role="navigation">
+       
       <div class="container-fluid">
       
      <!-- Classes Header -->
         <div class="navbar-header">
+         <center> <p class="navbar-text"> <b>{{classInfo.courseName}} - {{classInfo.className}} ({{classInfo.sectionID}}) </b></p></center>
+
           
+         
         </div>
-        <p class="navbar-text" id="class-title"> {{classInfo.courseName}} - {{classInfo.className}} ({{classInfo.sectionID}}) </p>
+        
     <!-- End Classes Header -->
+    
 
+    <!-- End Classes List -->
       </div>
+    </nav> 
 
-    </nav>
+ <div class="container">
 
-  {{#if group}} 
+
+
   <ul class="nav nav-tabs">
     <li class="active"><a href="#classMates" data-toggle="tab">All</a></li>
       <li><a href="#groupMates" data-toggle="tab" >Groupmates</a></li>
@@ -164,60 +158,19 @@
           </table>
 
     </div> 
-   </div>  
+    
       
   </div>
-  {{else}}
 
-    <div class="input">
-  <input id="filter" type="text" class="form-control" placeholder="Filter Students">
-</div><br>
-  <!-- Classes Info Class -->
-    <div data-spy="scroll" data-target="#navbar-example2" data-offset="0" class="scrollspy-example fixed-box">
-    <!-- Content for classes -->
-
- 
-    <table class="table classmates table-striped">
-      <thead>
-        <tr <tr class="btn-primary">
-          <th>Profile</th>
-          <th>First Name</th>
-          <th>Last Name</th>
-        </tr>
-      </thead>
-      <tbody>
-        {{#each students}}
-        <tr id='{{id}}'>
-                <td class="clickable"><img src='{{imageURL}}' height="75px" width="75px" class="img-circle"></td>
-                <td class="clickable">{{firstName}}</td>
-                <td class="clickable">{{lastName}}</td>
-        </tr>
-        {{/each}}
-      </tbody>
-    </table>
-     
-
-  </div>
-  {{/if}}
-
+</div>
   <!-- Bootstrap core JavaScript
   ================================================== -->
   <!-- Placed at the end of the document so the pages load faster -->
-  <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script src="js/jquery-1.10.2.min.js"></script>
   <script src="dist/js/bootstrap.min.js"></script>
   <script src="js/initializeClass.js"></script>
 
-  <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-48640414-1', 'classbooktest.herokuapp.com');
-  ga('send', 'pageview');
-
-  </script>
-
-</body
+</body>
 
 </html>

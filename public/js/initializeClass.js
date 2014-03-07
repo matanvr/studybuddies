@@ -4,12 +4,12 @@ $(document).ready(function(event) {
 	//console.log(students);
 
 	$('.clickable').click(function() {
-		ga("send", "event", "profileclick", "click");
+		
 		//
 		goToProfile($(this).parent().attr('id'));
 	});
 	$('.grid-clickable').click(function() {
-		ga("send", "event", "profileclick", "click");
+		
 		//
 		goToProfile($(this).parent().parent().attr('id'));
 	});
