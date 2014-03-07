@@ -12,7 +12,7 @@ function capitalize(s)
 
 exports.initialize = function(req, res) {    
 	// Your code goes here
-	req.session.userID = 1;
+	
 	var studentID = req.session.userID;
 
 	if(studentID == undefined){
