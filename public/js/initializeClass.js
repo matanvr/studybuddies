@@ -44,7 +44,6 @@ $('.invite').click(function(){
     var addPartnerDiv = "<tr id='{{id}}'>" + 
                "<td class='clickable'>" + parentDiv.find('td').eq(0).html()+ "</td>'" + 
                "<td class='clickable'>" + parentDiv.find('td').eq(1).html()+ "</td>" +  
-               "<td class='clickable'>" + parentDiv.find('td').eq(2).html()+ "</td>" + 
              " </tr>";
     console.log( $('#groupmatestable tr:last'));
 
