@@ -92,12 +92,12 @@
       <div class="panel-body">
         <div class="edit-buttons">
           <div class="btn-group" >
-             <button type="button" class="btn btn-default " id="editToggle"><span class="glyphicon glyphicon-pencil"></span></button> 
+             <button type="button" class="btn btn-default "><span class="glyphicon glyphicon-pencil edit-toggle"></span></button> 
             
             </div>
         </div>
         <br>
-          <div  id ="togglewinter2014"> 
+          <div  id ="togglewinter2014" class="toggle-menu"> 
                <div class="form-horizontal">
               
           
@@ -106,45 +106,28 @@
                       <input class="form-control classID" placeholder="Course ID">
                       <input class="form-control className" placeholder="Class Name">
                       <input class="form-control sectionID" placeholder="Section ID">
-                      <button class="btn btn-primary btn-block addclass"> Add </button>
+                      <button class="btn btn-primary btn-block add-class"> Add </button>
                       <br>
            
                  <INPUT TYPE="hidden" class="term" VALUE="winter2014">
               </div>
         </div>
-        <table class="table classes table-striped" id="winter2014table">
-          <thead>
-          <tr class="btn-primary">
-       
-          <th> 
-             ID
-          </th>
-          <th> 
-             Name
-          </th>
-          <th> 
-             Section
-          </th>
-          <th>
-            Edit
-          </th>
-        </tr>
-          </thead>
-          <tbody>
-      
-          {{#each quarters.winter2014}}
-           <tr> 
-              <td class ="clickable" >{{id}}</td>
-              <td class ="clickable">{{name}}</td>
-              <td class ="clickable" >{{section}}</td>
-              <td class="remove">  <span class="glyphicon glyphicon-remove"></span></td>      
-           </tr>
-           {{/each}}
-          </tbody> 
-        </table>
 
-      </div>
-    </div>
+  <div class="list-group" id="winter2014grid">
+  
+    {{#each quarters.winter2014}}
+    <a class="list-group-item" id="{{section}}" > 
+     <span class="pull-right">
+        <button class="btn btn-primary class-click"> View </button>
+     </span>
+      <span class="info"><h4 class="class-id">{{id}}</h4> <span class="class-name">{{name}} </span> <br> Section <span class="section">{{section}}</span></span>
+    </a>
+    {{/each}}
+
+  </div>
+</div>
+</div>
+ 
   </div>
   <div class="panel panel-default">
     <div class="panel-heading">
@@ -155,57 +138,43 @@
       </h4>
     </div>
     <div id="fa13dis" class="panel-collapse collapse">
-      <div class="panel-body">
+     <div class="panel-body">
         <div class="edit-buttons">
           <div class="btn-group" >
-             <button type="button" class="btn btn-default " id="editToggleFall2013"><span class="glyphicon glyphicon-pencil"></span></button> 
+             <button type="button" class="btn btn-default " ><span class="glyphicon glyphicon-pencil edit-toggle"></span></button> 
             
             </div>
         </div>
         <br>
-          <div  id ="togglefall2013" > 
+          <div class="toggle-menu"> 
                <div class="form-horizontal">
-                      <label class="control-label"> Add Class:</label>
+              
+          
+       
+                      <label class="control-label" > Add Class:</label>
                       <input class="form-control classID" placeholder="Course ID">
                       <input class="form-control className" placeholder="Class Name">
                       <input class="form-control sectionID" placeholder="Section ID">
-                      <button class="btn btn-primary btn-block addclass"> Add </button>
+                      <button class="btn btn-primary btn-block add-class"> Add </button>
                       <br>
            
                  <INPUT TYPE="hidden" class="term" VALUE="fall2013">
               </div>
         </div>
-        <table class="table table-striped classes" id="fall2013table" >
-          <thead>
-          <tr class="btn-primary">
-       
-          <th> 
-             ID
-          </th>
-          <th> 
-             Name
-          </th>
-          <th> 
-             Section
-          </th>
-          <th>
-            Edit
-          </th>
-        </tr>
-          </thead>
-          <tbody>
-      
-          {{#each quarters.fall2013}}
-           <tr> 
-              <td class ="clickable" >{{id}}</td>
-              <td class ="clickable">{{name}}</td>
-              <td class ="clickable" >{{section}}</td>
-              <td class="remove">  <span class="glyphicon glyphicon-remove"></span></td>      
-           </tr>
-           {{/each}}
-          </tbody> 
-        </table>
-      </div>
+
+  <div class="list-group" >
+  
+    {{#each quarters.fall2013}}
+    <a class="list-group-item" id="{{section}}" > 
+     <span class="pull-right">
+        <button class="btn btn-primary class-click"> View </button>
+     </span>
+      <span class="info"><h4 class="class-id">{{id}}</h4> <span class="class-name">{{name}} </span> <br> Section <span class="section">{{section}}</span></span>
+    </a>
+    {{/each}}
+
+  </div>
+</div>
     </div>
   </div>
   <div class="panel panel-default">
@@ -220,57 +189,41 @@
       <div class="panel-body">
         <div class="edit-buttons">
           <div class="btn-group" >
-             <button type="button" class="btn btn-default " id="editToggleSummer2013"><span class="glyphicon glyphicon-pencil"></span></button> 
+             <button type="button" class="btn btn-default " ><span class="glyphicon glyphicon-pencil edit-toggle"></span></button> 
             
           </div>
         </div>
         <br>
-          <div  id ="togglesummer2013" > 
-               <div class="form-horizontal" >
+          <div  class="toggle-menu"> 
+                  <div class="form-horizontal">
               
           
        
-                      <label class="control-label" > Add Class: </label>
-                      <input class="form-control classID" name="classID" placeholder="Course ID">
-                      <input class="form-control className" name="className" placeholder="Class Name">
-                      <input class="form-control sectionID" name="sectionID" placeholder="Section ID">
-                      <button  class="btn btn-primary btn-block addclass"> Add </button>
+                      <label class="control-label" > Add Class:</label>
+                      <input class="form-control classID" placeholder="Course ID">
+                      <input class="form-control className" placeholder="Class Name">
+                      <input class="form-control sectionID" placeholder="Section ID">
+                      <button class="btn btn-primary btn-block add-class"> Add </button>
                       <br>
            
                  <INPUT TYPE="hidden" class="term" VALUE="summer2013">
               </div>
         </div>
-       <table class="table classes table-striped" id="summer2013table">
-          <thead>
-          <tr class="btn-primary">
-       
-          <th> 
-             ID
-          </th>
-          <th> 
-             Name
-          </th>
-          <th> 
-             Section
-          </th>
-          <th>
-            Edit
-          </th>
-        </tr>
-          </thead>
-          <tbody>
-      
-          {{#each quarters.summer2013}}
-           <tr> 
-              <td class ="clickable" >{{id}}</td>
-              <td class ="clickable">{{name}}</td>
-              <td class ="clickable" >{{section}}</td>
-              <td class="remove">  <span class="glyphicon glyphicon-remove"></span></td>      
-           </tr>
-           {{/each}}
-          </tbody> 
-        </table>
-      </div>
+
+  <div class="list-group">
+  
+    {{#each quarters.summer2013}}
+    <a class="list-group-item" id="{{section}}" > 
+     <span class="pull-right">
+        <button class="btn btn-primary class-click"> View </button>
+     </span>
+      <span class="info"><h4 class="class-id">{{id}}</h4> <span class="class-name">{{name}} </span> <br> Section <span class="section">{{section}}</span></span>
+    </a>
+    {{/each}}
+
+  </div>
+
+</div>
     </div>
   </div>
     <div class="panel panel-default">
@@ -285,58 +238,41 @@
       <div class="panel-body">
         <div class="edit-buttons">
           <div class="btn-group" >
-             <button type="button" class="btn btn-default " id="editToggleSpring2013"><span class="glyphicon glyphicon-pencil"></span></button> 
+             <button type="button" class="btn btn-default " ><span class="glyphicon glyphicon-pencil edit-toggle"></span></button> 
             
           </div>
         </div>
         <br>
-          <div  id ="togglespring2013" > 
-               <div class="form-horizontal" >
+          <div  id ="togglespring2013" class="toggle-menu" > 
+               <div class="form-horizontal">
               
           
        
-                      <label class="control-label" > Add Class: </label>
-                      <input class="form-control classID" name="classID" placeholder="Course ID">
-                      <input class="form-control className" name="className" placeholder="Class Name">
-                      <input class="form-control sectionID" name="sectionID" placeholder="Section ID">
-                      <button class="btn btn-primary btn-block addclass"> Add </button>
+                      <label class="control-label" > Add Class:</label>
+                      <input class="form-control classID" placeholder="Course ID">
+                      <input class="form-control className" placeholder="Class Name">
+                      <input class="form-control sectionID" placeholder="Section ID">
+                      <button class="btn btn-primary btn-block add-class"> Add </button>
                       <br>
            
                  <INPUT TYPE="hidden" class="term" VALUE="spring2013">
               </div>
         </div>
 
-       <table class="table classes table-striped" id="spring2013table">
-          <thead>
-          <tr class="btn-primary">
-       
-          <th> 
-             ID
-          </th>
-          <th> 
-             Name
-          </th>
-          <th> 
-             Section
-          </th>
-          <th>
-            Edit
-          </th>
-        </tr>
-          </thead>
-          <tbody>
-      
-          {{#each quarters.spring2013}}
-           <tr> 
-              <td class ="clickable" >{{id}}</td>
-              <td class ="clickable">{{name}}</td>
-              <td class ="clickable" >{{section}}</td>
-              <td class="remove">  <span class="glyphicon glyphicon-remove"></span></td>      
-           </tr>
-           {{/each}}
-          </tbody> 
-        </table>
-      </div>
+  <div class="list-group" id="winter2014grid">
+  
+    {{#each quarters.spring2013}}
+    <a class="list-group-item" id="{{section}}" > 
+     <span class="pull-right">
+        <button class="btn btn-primary class-click"> View </button>
+     </span>
+      <span class="info"><h4 class="class-id">{{id}}</h4> <span class="class-name">{{name}} </span> <br> Section <span class="section">{{section}}</span></span>
+    </a>
+    {{/each}}
+
+  </div>
+
+</div>
     </div>
   </div>
 
