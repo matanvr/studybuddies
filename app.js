@@ -15,7 +15,7 @@ var help = require('./routes/help');
 var myprofile = require('./routes/my-profile');
 var profile = require('./routes/profile');
 var signup = require('./routes/sign-up');
-
+var groups = require('./routes/groups');
 // Example route
 // var user = require('./routes/user');
 
@@ -58,7 +58,7 @@ app.get('/addUser', signup.addUser);
 app.get('/logout', index.logout);
 app.post('/help', help.mail);
 app.get('/removeClass', homepage.removeClass);
-
+app.get('/groups', groups.initialize);
 app.post('/updatePassword', myprofile.updatePassword);
 app.post('/updateName', myprofile.updateName);
 app.post('/updateEmail', myprofile.updateEmail);
