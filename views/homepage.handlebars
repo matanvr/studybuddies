@@ -59,7 +59,7 @@
     <!-- End Classes List -->
       </div>
     </nav>
- <div class="container">
+
 	 
 	<!-- Nav Bar Class -->
 	<!-- End Nav Bar Class -->
@@ -282,9 +282,23 @@
     </div>
 
   <div id="allClasses" class="tab-pane"> 
+    <div class="container">
     <br>
      <input type="text" class="form-control" placeholder="Filter Classes" id="filter">
     <br>
+
+      <div class="list-group">
+  
+    {{#each allClasses}}
+    <a class="list-group-item" id="{{section}}" > 
+     <span class="pull-right">
+        <button class="btn btn-primary class-click"> View </button>
+     </span>
+      <span class="info"><h4 class="class-id">{{id}}</h4> <span class="class-name">{{name}} </span> <br> Section <span class="section">{{section}}</span> <br><span> {{quarter}}</span></span>
+    </a>
+    {{/each}}
+<!--
+    </div>
           <table class="table table-striped AllClasses">
         <thead>    
         <tr class="btn-primary">
@@ -310,10 +324,11 @@
               <td class="clickable"> {{quarter}} </td>    
            </tr>
            {{/each}}
-        </table> 
+        </table> -->
+      </div>
   </div>  
 	<!-- End Classes Info Class -->
-	</div>
+
   </div>
 
 
