@@ -76,19 +76,25 @@ $('.add-class').click(function(){
      "</span>"+
       "<span class='info'><h4 class='class-id'>"+courseName + "</h4> <span class='class-name'>" + className+" </span> <br> Section <span class='section'>"+ sectionID + " </span></span>" + 
     "</a>";
+
+    var htmlClass2 = "<a class='list-group-item' id='sectionID' > " +
+     "<span class='pull-right'>"+
+        "<button class='btn btn-primary class-click'> View </button>" + 
+     "</span>"+
+      "<span class='info'><h4 class='class-id'>"+courseName + "</h4> <span class='class-name'>" + className+" </span> <br> Section <span class='section'> "+ sectionID + " </span> <br><span> "+term+"</span></span>" + 
+    "</a>";
     parentDiv.append(htmlClass);
-    var newRow2 = "<tr><td class ='clickable' >"+ courseName+"</td><td class ='clickable'>"+className+"</td><td class ='clickable'>"+ sectionID  +"</td> <td >" + term+"</td></tr>";
-    $(".AllClasses").append(newRow2);
+    $("#AllClasses").append(htmlClass2);
 
     //adding clicks to class
     $('.class-click').click(function(){
-	var parentDiv = $(this).parent().parent();
-	var courseName = parentDiv.find('.info .class-id').html();
-	var className = parentDiv.find('.info .class-name').html();
-	var sectionID = parentDiv.find('.info .section').html();
-	var url = "class?courseName=" + courseName + "&className=" + className 
-	+ "&sectionID=" + sectionID;
-	window.location.href=url;
+		var parentDiv = $(this).parent().parent();
+		var courseName = parentDiv.find('.info .class-id').html();
+		var className = parentDiv.find('.info .class-name').html();
+		var sectionID = parentDiv.find('.info .section').html();
+		var url = "class?courseName=" + courseName + "&className=" + className 
+		+ "&sectionID=" + sectionID;
+		window.location.href=url;
 	
 	});
 
