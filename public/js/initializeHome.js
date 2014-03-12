@@ -21,7 +21,7 @@ $('.class-click').click(function(){
 });
 
 $('.edit-toggle').click(function(){
-     var parentDiv = $(this).parent().parent().parent().parent();
+     var parentDiv = $(this).parent().parent().parent();
 	if($(this).hasClass('on')){
 		var classes = parentDiv.find('.list-group a .pull-right').html('<button class="btn btn-primary class-click"> View </button>');
 		$('.class-click').click(function(){
