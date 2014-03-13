@@ -27,7 +27,6 @@ var fs = require('fs');
 
 exports.upload = function(req, res) {
 	var userFile = require("../data.json");
-	console.log(req.files);
 
 	fs.readFile(req.files.image.path, function (err, data) {
 
