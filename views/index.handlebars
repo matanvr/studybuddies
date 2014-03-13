@@ -15,6 +15,8 @@
 
     <!-- Custom styles for this template (Sign In Page) -->
     <link href="css/signin.css" rel="stylesheet">
+
+    <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
   </head>
 
 <body data-spy="scroll" data-target=".navbar-example">
@@ -35,7 +37,7 @@
         {{/if}}
         <center><img class="logo" src="img/logo.png"></center> 
 
-        <h2 class="form-signin-heading" style="color:#fff">Sign in</h2>
+        <h2 class="form-signin-heading text" style="color:#fff">Sign in</h2>
         <input type="email" name="email" class="form-control" placeholder="Email address" required autofocus>
         <input type="password" name="password" class="form-control" placeholder="Password" required>
         <label class="checkbox">
@@ -46,19 +48,30 @@
   </form>
   
   <br><br>
-  <h3 class="description"> Find students from your past classes and connect with future ones! </h3>
-  
-  <h2 class="text"> Here are some features: </h2>
-  <center>
-    <img class="img-thumbnail" src="img/signin/1.png" width="40%">
-    <h2 class="text"> View your classes for the current quarter </h3>
-    <br>
-    <img class="img-thumbnail" src="img/signin/2.png" width="40%">
-    <h2 class="text"> View your classmates for each class </h3>
-    <br>
-    <img class="img-thumbnail" src="img/signin/3.png" width="40%">
-    <h2 class="text"> View specific users' profiles </h3>
-  </center>
+  <h3 class="text"> Find students from your past classes and connect with future ones! </h3>
+  <br><br>
+
+  <div class="container">
+    <center>
+      <div class="row">
+        <div class="col-lg-4">
+          <img class="img-thumbnail" src="img/signin/1.png" width="70%" alt="">
+          <h2 class="text">View your classes for the current quarter</h2>
+          <p></p>
+        </div>
+        <div class="col-lg-4">
+          <img class="img-thumbnail" src="img/signin/2.png" width="70%" alt="">
+          <h2 class="text">View your classmates for each class</h2>
+          <p></p>
+        </div>
+        <div class="col-lg-4">
+          <img class="img-thumbnail" src="img/signin/3.png" width="70%" alt="">
+          <h2 class="text">View specific users' profiles</h2>
+          <p></p>
+        </div>
+      </div>
+    </center>
+  </div>
 </div>
 
   <!-- Bootstrap core JavaScript
