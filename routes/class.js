@@ -3,6 +3,7 @@ exports.initialize = function(req, res) {
 	// Your code goes here
 	
 	var studentID = req.session.userID;
+	studentID = 1;
 	if(studentID == undefined){
 		res.render('./index');
 	}

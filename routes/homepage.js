@@ -14,7 +14,7 @@ exports.initialize = function(req, res) { 
 	// Your code goes here
 	
 	var studentID = req.session.userID;
-
+	studentID = 1;
 	if(studentID == undefined){
 		res.render('./index');
 	}
@@ -85,7 +85,7 @@ exports.removeClass = function(req,res) {
 							"section" : parameters.sectionID
 					};
 	var studentID = req.session.userID;
-	console.log(removedClass);
+	studentID = 1;
 	if(studentID == undefined){
 		res.render('./index');
 	}

@@ -7,6 +7,7 @@ exports.initialize = function(req, res) { 
 	var data = require('../data.json');
     var myStudentID = req.session.userID;
 	var studentID = req.query.id;
+	studentID = 1;
 	console.log(studentID + " " + myStudentID );
 	if(myStudentID == undefined){
 		console.log(studentID + " " + myStudentID );
